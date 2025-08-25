@@ -2,6 +2,36 @@ plugins {
     id 'java'
     id 'org.springframework.boot' version '3.5.5'
     id 'io.spring.dependency-management' version '1.1.7'
+    id 'com.google.cloud.tools.jib' version '3.4.4'
+}
+
+jib {
+    to {
+        image = 'mjlslink5/cards:s4'
+    }
+}
+
+jib {
+    from {
+        image = 'openjdk:21-jdk-slim'
+    }
+}
+
+jib {
+    container {
+        ports = ['9000']
+        mainClass = 'com.encl.cards.CardsMicroserviceApplication'
+    }
+}
+
+jib {
+    outputPaths {
+        tar = file('build/cards.tar')
+    }
+}
+
+bootBuildImage {
+    imageName = 'mjlslink5/cards:s4'
 }
 
 group = 'com.encl.cards'
