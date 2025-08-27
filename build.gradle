@@ -70,7 +70,8 @@ dependencies {
     implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.10")
 // https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-config
     implementation("org.springframework.cloud:spring-cloud-starter-config:5.0.0-M1")
-
+// https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-config-monitor
+    runtimeOnly("org.springframework.cloud:spring-cloud-config-monitor:4.3.0")
     compileOnly 'org.projectlombok:lombok'
     runtimeOnly 'com.h2database:h2'
     annotationProcessor 'org.projectlombok:lombok'
