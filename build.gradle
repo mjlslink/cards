@@ -13,7 +13,7 @@ dependencyManagement {
 
 jib {
     to {
-        image = 'mjlslink5/cards:s4'
+        image = 'mjlslink5/cards:s6'
     }
 }
 
@@ -37,7 +37,7 @@ jib {
 }
 
 bootBuildImage {
-    imageName = 'mjlslink5/cards:s4'
+    imageName = 'mjlslink5/cards:s6'
 }
 
 group = 'com.encl.cards'
